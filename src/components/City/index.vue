@@ -101,9 +101,15 @@
 
     beforeMount() {},
 
-    mounted() {},
+    mounted() {
+		this.axios.get('/api/cityList').then((res)=>{
+			console.log(res);
+		})
+	},
 
-    methods: {},
+    methods: {
+
+	},
 
     watch: {}
 
