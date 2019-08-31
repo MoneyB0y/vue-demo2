@@ -1,15 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import movieRouter from './movie'
+import cinemaRouter from './cinema'
+import mineRouter from './mine'
+
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
+      movieRouter,
+      cinemaRouter,
+      mineRouter,
+      {
+        path: '/*',
+        redirect: '/movie'
+      }
   ]
 })
