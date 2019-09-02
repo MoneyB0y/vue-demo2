@@ -11,6 +11,9 @@ Vue.config.productionTip = false
 Vue.filter('setWH',(url,arg) => {
   return url.replace(/w\.h/,arg);
 })
+
+import Scroller from '@/components/Scroller';
+Vue.component('Scroller',Scroller);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
