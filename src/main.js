@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import store from './stores'
+import store from './stores'
 import axios from 'axios'
 Vue.prototype.axios = axios;
 
@@ -11,10 +11,17 @@ Vue.config.productionTip = false
 Vue.filter('setWH',(url,arg) => {
   return url.replace(/w\.h/,arg);
 })
+
+import Scroller from '@/components/Scroller';
+Vue.component('Scroller',Scroller);
+
+import Loading from '@/components/Loading'
+Vue.component('Loading',Loading);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
