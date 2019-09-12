@@ -15,6 +15,10 @@ Vue.filter('setWH',(url,arg) => {
 import Scroller from '@/components/Scroller';
 Vue.component('Scroller',Scroller);
 
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+
 import Loading from '@/components/Loading'
 Vue.component('Loading',Loading);
 /* eslint-disable no-new */

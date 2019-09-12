@@ -1,46 +1,28 @@
 <template>
   <div id="main">
-      <Header title="我的喵喵"/>
+      <Header title="我的喵喵" />
       <div id="content">
-          <Login />
+          <router-view />
       </div>
       <TabBar />
   </div>
 </template>
 
 <script>
-  import Header from '@/components/Header';
-  import TabBar from '@/components/TabBar';
-  import Login from '@/components/Login';
+import Header from '@/components/Header';
+import TabBar from '@/components/TabBar';
+import Login from '@/components/Login';
 
-  export default {
-    name:'Mine',
-    props:[''],
-    data () {
-      return {
-
-      };
-    },
-
-    components: {
+export default {
+  name : 'Mine',
+  components : {
       Header,
       TabBar,
       Login
-    },
-
-    computed: {},
-
-    beforeMount() {},
-
-    mounted() {},
-
-    methods: {},
-
-    watch: {}
-
   }
-
+}
 </script>
+
 <style>
 
 </style>
